@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketWise - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>💰 PocketWise</h1>
+    <p>Understand Your Spending, Improve Your Saving.</p>
+</header>
+
+<main class="container">
+
+    <section class="summary">
+        <div class="summary-card">
+            <h3>Total Spent</h3>
+            <h2 id="total">₹0.00</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>Monthly Budget</h3>
+            <h2 id="budget">₹2000.00</h2>
+        </div>
+
+        <div class="summary-card">
+            <h3>Remaining</h3>
+            <h2 id="remaining">₹2000.00</h2>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🎯 Set Monthly Budget</h2>
+        <input type="number" id="budgetInput"
+               placeholder="Enter your budget">
+        <button onclick="setBudget()">Set Budget</button>
+    </section>
+
+    <section class="card">
+        <h2>➕ Add New Expense</h2>
+
+        <input type="text" id="expenseName"
+               placeholder="Expense name">
+
+        <input type="number" id="amount"
+               placeholder="Amount (₹)" min="0.01" step="0.01">
+
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Education">Education</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="type">
+            <option value="Need">Need</option>
+            <option value="Want">Want</option>
+        </select>
+
+        <input type="date" id="date">
+
+        <button onclick="addExpense()">Add Expense</button>
+    </section>
+
+    <section class="card">
+        <h2>📋 Expense History</h2>
+        <div id="expenseList"></div>
+    </section>
+
+    <section class="card">
+        <h2>🔍 Money Leak Detector</h2>
+        <p id="insight">
+            Add expenses to discover your spending habits.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Made with ❤️ | PocketWise</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

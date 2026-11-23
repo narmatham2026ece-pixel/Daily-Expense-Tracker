@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f0ff;
+    color: #292344;
+}
+
+header {
+    background: linear-gradient(135deg, #7048e8, #a78bfa);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px 12px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.summary-card h3 {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.summary-card h2 {
+    color: #7048e8;
+    font-size: 22px;
+    overflow-wrap: anywhere;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.card h2 {
+    margin-bottom: 18px;
+    color: #49318c;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #a78bfa;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #7048e8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #5932cf;
+}
+
+.expense-item {
+    background: #f8f6ff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-left: 5px solid #7048e8;
+    border-radius: 8px;
+}
+
+.expense-item h3 {
+    margin-bottom: 8px;
+}
+
+.expense-item p {
+    margin-bottom: 7px;
+    color: #666;
+}
+
+.delete-btn {
+    background: #e5484d;
+    margin-top: 8px;
+}
+
+.delete-btn:hover {
+    background: #c92d35;
+}
+
+#insight {
+    line-height: 1.7;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
